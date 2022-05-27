@@ -1,0 +1,6 @@
+// id (int pk)
+// username (varchar)
+// email (varchar)
+// avatar url (varchar)
+// password (varchar bcrypted)
+// bio (varchar 175)
