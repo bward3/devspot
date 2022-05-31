@@ -1,0 +1,92 @@
+<!-- HEADER -->
+<header class="header container block pt-6">
+    <h1 class="title has-text-centered is-1">
+        DevSpot
+    </h1>
+    </div>
+</header>
+<!-- END HEADER -->
+
+<!-- SIDEBAR -->
+<section class="container pt-6">
+    <div class="columns">
+        <div class="column is-3">
+            <figure class="image is-128x128">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+            <aside class="menu profile">
+                <p class="menu-name title">
+                    {{userName}}
+                </p>
+                <p class="menu-location">
+                    Colorado
+                </p>
+            </aside>
+        </div>
+        <!-- END SIDEBAR -->
+
+        <!-- BIO -->
+        <div class="column is-9">
+            <div class="box  block">
+                <div class="container">
+                    <h2 class="is-size-3 title">Bio:</h2>
+                    <h3 class="is-">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium vitae suscipit
+                        voluptates, facere placeat praesentium laboriosam. Itaque commodi, consequatur necessitatibus
+                        facere nemo quis aperiam, vitae incidunt maxime id numquam optio!</h3>
+                </div>
+            </div>
+            <!-- END BIO -->
+
+            <!-- FRONT END -->
+            <div class="container box tech">
+                <p class="title frontEnd is-size-3">
+                    Front End Tech
+                </p>
+                <p>
+                    {{#if expertise.html}}
+                    <i class="fa-brands fa-html5 fa-2xl p-5 is-size-{{expertise.html}}">HTML</i>
+                    {{/if}}
+                    <i class="fa-brands fa-css3 fa-2xl p-5 is-size-{{expertise.css}}">CSS</i>
+                    {{#if expertise.javaScript}}
+                    <i class="fa-brands fa-js-square fa-2xl p-5 is-size-5">JavaScript</i>
+                    {{/if}}
+                    <i class="fa-brands fa-bootstrap fa-2xl p-5">Bootstrap</i>
+                    <i class="fa-brands fa-vuejs fa-2xl p-5">Vue.JS</i>
+                    <i class="fa-brands fa-angular fa-2xl p-5">Angular</i>
+                </p>
+            </div>
+            <!-- END FRONT END -->
+
+            <!-- BACK END -->
+            <div class="container box tech">
+                <p class="title backEnd is-size-3">
+                    Back End Tech
+                </p>
+                <p>
+                    <i class="fa-brands fa-python fa-2xl p-5">Python</i>
+                    <i class="fa-solid fa-gem fa-2xl p-5 is-size-{{expertise.ruby}}">Ruby</i>
+                    <i class="fa-brands fa-php fa-2xl p-5">PHP</i>
+                    <i class="fa-brands fa-java fa-2xl p-5">Java</i>
+                    <i class="fa-solid fa-code fa-2xl p-5">C++</i>
+                    <i class="fa-brands fa-node fa-2xl p-5 is-size-{{expertise.nodeJs}}">Node.JS</i>
+                </p>
+            </div>
+            <!-- END BACK END -->
+
+            <!-- OTHER TECH -->
+            <div class="container box tech">
+                <p class="title  otherTech is-size-3">
+                    Other Tech
+                </p>
+                <p>
+                    <i class="fa-solid fa-desktop fa-2xl p-5">VS Code</i>
+                    <i class="fa-brands fa-microsoft fa-2xl p-5">Microsoft</i>
+                    <i class="fa-brands fa-apple fa-2xl p-5 is-size-{{expertise.apple}}">Apple</i>
+                    <i class="fa-solid fa-beer-mug fa-2xl p-5">Homebrew</i>
+                    <i class="fa-solid fa-hashtag fa-2xl p-5 is-size-{{expertise.bash}}">Bash</i>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END OTHER TECH -->
