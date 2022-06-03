@@ -8,6 +8,7 @@ router.get("/login", function (req, res) {
   res.render("login");
 });
 
+<<<<<<< HEAD
 router.get("/profile", function (req, res) {
   res.render("profile", {
     // Example
@@ -26,5 +27,31 @@ router.get("/profile", function (req, res) {
 router.get("/edit", function (req, res) {
   res.render("edit");
 });
+=======
+router.get("/profile", function(req, res) {
+    res.render("profile", {
+        // Example User
+        userName: "Bob Smith",
+        location: "Denver, Colorado",
+        gitHub: "coolkidBob",
+        linkedIn: "BobSmith55",
+        bio: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium vitae suscipit voluptates, facere placeat praesentium laboriosam. Itaque commodi, consequatur necessitatibus facere nemo quis aperiam, vitae incidunt maxime id numquam optio!",
+        expertise: {
+            html: 1,
+            css: 1,
+            ruby: 3,
+            nodeJs: 5,
+            apple: 1,
+            bash: 5,
+
+        }
+    });
+})
+
+router.get("/edit", function(req, res) {
+    res.render("edit", {
+    });
+})
+>>>>>>> 00bd17a0f238f295d16b6586d8e3610c1b478123
 
 module.exports = router;
