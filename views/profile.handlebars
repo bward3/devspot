@@ -19,7 +19,7 @@
                     {{userName}}
                 </p>
                 <p class="menu-location">
-                    Colorado
+                    {{location}}
                 </p>
             </aside>
         </div>
@@ -30,9 +30,7 @@
             <div class="box  block">
                 <div class="container">
                     <h2 class="is-size-3 title">Bio:</h2>
-                    <h3 class="is-">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium vitae suscipit
-                        voluptates, facere placeat praesentium laboriosam. Itaque commodi, consequatur necessitatibus
-                        facere nemo quis aperiam, vitae incidunt maxime id numquam optio!</h3>
+                    <h3 class="is-">{{bio}}</h3>
                 </div>
             </div>
             <!-- END BIO -->
@@ -46,13 +44,21 @@
                     {{#if expertise.html}}
                     <i class="fa-brands fa-html5 fa-2xl p-5 is-size-{{expertise.html}}">HTML</i>
                     {{/if}}
+                    {{#if expertise.css}}
                     <i class="fa-brands fa-css3 fa-2xl p-5 is-size-{{expertise.css}}">CSS</i>
+                    {{/if}}
                     {{#if expertise.javaScript}}
                     <i class="fa-brands fa-js-square fa-2xl p-5 is-size-5">JavaScript</i>
                     {{/if}}
+                    {{#if expertise.bootstrap}}
                     <i class="fa-brands fa-bootstrap fa-2xl p-5">Bootstrap</i>
+                    {{/if}}
+                    {{#if expertise.vueJs}}
                     <i class="fa-brands fa-vuejs fa-2xl p-5">Vue.JS</i>
+                    {{/if}}
+                    {{#if expertise.angular}}
                     <i class="fa-brands fa-angular fa-2xl p-5">Angular</i>
+                    {{/if}}
                 </p>
             </div>
             <!-- END FRONT END -->
@@ -63,12 +69,24 @@
                     Back End Tech
                 </p>
                 <p>
+                    {{#if expertise.python}}
                     <i class="fa-brands fa-python fa-2xl p-5">Python</i>
+                    {{/if}}
+                    {{#if expertise.ruby}}
                     <i class="fa-solid fa-gem fa-2xl p-5 is-size-{{expertise.ruby}}">Ruby</i>
+                    {{/if}}
+                    {{#if expertise.php}}
                     <i class="fa-brands fa-php fa-2xl p-5">PHP</i>
+                    {{/if}}
+                    {{#if expertise.java}}
                     <i class="fa-brands fa-java fa-2xl p-5">Java</i>
+                    {{/if}}
+                    {{#if expertise.cPlusPlus}}
                     <i class="fa-solid fa-code fa-2xl p-5">C++</i>
+                    {{/if}}
+                    {{#if expertise.nodeJs}}
                     <i class="fa-brands fa-node fa-2xl p-5 is-size-{{expertise.nodeJs}}">Node.JS</i>
+                    {{/if}}
                 </p>
             </div>
             <!-- END BACK END -->
@@ -79,11 +97,21 @@
                     Other Tech
                 </p>
                 <p>
+                    {{#if expertise.vsCode}}
                     <i class="fa-solid fa-desktop fa-2xl p-5">VS Code</i>
+                    {{/if}}
+                    {{#if expertise.microsoft}}
                     <i class="fa-brands fa-microsoft fa-2xl p-5">Microsoft</i>
+                    {{/if}}
+                    {{#if expertise.apple}}
                     <i class="fa-brands fa-apple fa-2xl p-5 is-size-{{expertise.apple}}">Apple</i>
+                    {{/if}}
+                    {{#if expertise.homebrew}}
                     <i class="fa-solid fa-beer-mug fa-2xl p-5">Homebrew</i>
+                    {{/if}}
+                    {{#if expertise.bash}}
                     <i class="fa-solid fa-hashtag fa-2xl p-5 is-size-{{expertise.bash}}">Bash</i>
+                    {{/if}}
                 </p>
             </div>
         </div>
