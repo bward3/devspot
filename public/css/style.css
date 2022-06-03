@@ -1,0 +1,21 @@
+#dropdownList {
+    width: 100%;
+}
+
+#slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#dropdown-menu3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

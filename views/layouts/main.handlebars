@@ -29,18 +29,18 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
+        {{!-- <div class="navbar-start">
             <a class="navbar-item">
                 Home
             </a>
-        </div>
+        </div> --}}
 
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
                     <!-- Conditionally render login or logout links -->
                     {{#if logged_in}}
-                    <a href="/profile" class="button is-primary">
+                    <a href="/profile" class="button">
                         Profile
                     </a>
                     <a class="button is-light" id="logout">
@@ -49,6 +49,11 @@
                     {{else}}
                     <a href="/login" class="button is-light">
                         Login
+                    </a>
+                    {{/if}}
+                    {{#if logged_in}}
+                    <a class="button">
+                        Edit Profile
                     </a>
                     {{/if}}
                 </div>
