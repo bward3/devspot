@@ -13,3 +13,9 @@
     display: flex;
     justify-content: center;
 }
+
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

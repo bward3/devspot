@@ -2,7 +2,7 @@
 <section class="container">
     <div class="columns">
         <div class="column is-three-fifths">
-            <h1 class="subtitle is-size-5 mb-1">Edit Name</h1>
+            <h1 class="subtitle is-size-5 mb-1 mt-6">Edit Name</h1>
             <input class="input mb-3" type="text" placeholder="Who are you?"></input>
             <h1 class="subtitle is-size-5 mb-1">Edit Location</h1>
             <input class="input mb-3" type="text" placeholder="Where do you live?"></input>
@@ -14,18 +14,21 @@
                     <i class="fa-brands fa-linkedin"></i>
                 </span>
             </p>
-            <p class="control has-icons-left mb-6">
+            <p class="control has-icons-left mb-3">
                 <input class="input" type="text" placeholder="Add GitHub Profile">
                 <span class="icon is-small is-left">
                     <i class="fa-brands fa-github"></i>
                 </span>
             </p>
+            <div class="btnWrapper">
+                <button class="button mb-6">Submit</button>
+            </div>
         </div>
         <div class="column is-two-fifths">
-            <h1 class="subtitle is-size-5 mb-1 has-text-centered">Add Tech</h1>
+            <h1 class="subtitle is-size-5 mb-1 has-text-centered mt-6 mb-4">Add Tech</h1>
             <div class="dropdown is-justify-content-center" id="dropdownList">
                 <div class="dropdown-trigger mx-1">
-                    <button class="button" id="dropdownBtn" aria-haspopup="true" aria-controls="dropdown-menu3">
+                    <button class="button mb-4" id="dropdownBtn" aria-haspopup="true" aria-controls="dropdown-menu3">
                         <span id="dropdownTitle">Click me</span>
                         <span class="icon is-small">
                             <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -89,9 +92,15 @@
                 </div>
             </div>
             <!-- 1=Beginner 2=Intermediate 3=Advanced -->
-            <p id="slider">
-                <input class="slider is-fullwidth" min="1" max="3" value="0" type="range">
+            <p id="slider">Beginner
+                {{!-- <input class="slider is-fullwidth" min="1" max="3" value="0" type="range"> --}}
+                <input id="sliderWithValue" class="slider has-output is-fullwidth" min="1" max="3" value="0" step="1"
+                    type="range"></input>
+                <output for="sliderWithValue">Advanced</output>
             </p>
+            <div class="btnWrapper">
+                <button class="button mt-5" id="editSubmitBtn">Submit</button>
+            </div>
         </div>
     </div>
 </section>
