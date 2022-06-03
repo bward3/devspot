@@ -1,7 +1,7 @@
 {
   "name": "devspot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Social media mockup for developers where one  can showcase skills and technologies known",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/bward3/devspot.git"
   },
-  "keywords": [],
+  "keywords": [
+    "devspot",
+    "node"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
