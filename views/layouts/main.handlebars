@@ -1,79 +1,92 @@
-<!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DevSpot</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/css/jass.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-            <figure class="image is-112x28">
-                <img src="./images/logo_icon.png">
-            </figure>
-        </a>
+      <a class="navbar-item" href="https://bulma.io">
+        <figure class="image is-112x28">
+          <img src="./images/logo_icon.png" />
+        </figure>
+      </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item">
-                Home
-            </a>
-        </div>
+      <div class="navbar-start">
+        <a href="/" class="navbar-item">
+          Home
+        </a>
+      </div>
 
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <!-- Conditionally render login or logout links -->
-                    {{#if logged_in}}
-                    <a href="/profile" class="button is-primary">
-                        Profile
-                    </a>
-                    <a class="button is-light" id="logout">
-                        Logout
-                    </a>
-                    {{else}}
-                    <a href="/login" class="button is-light">
-                        Login
-                    </a>
-                    {{/if}}
-                </div>
-            </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+              <a href="/profile" class="button is-primary">
+                Profile
+              </a>
+              <a class="button is-light" id="logout">
+                Logout
+              </a>
+            {{else}}
+              <a href="/login" class="button is-light">
+                Login
+              </a>
+            {{/if}}
+          </div>
         </div>
+      </div>
     </div>
-</nav>
+  </nav>
 
-<body style="background-color: #ffe2de">
+  <body style="background-color: #ffe2de">
     <!-- Render the sub layout -->
-    {{{ body }}}
+    {{{body}}}
 
     <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                Created by Catherine F, Norman H, Brian W, and Kelly W. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-            </p>
-        </div>
+      <div class="content has-text-centered">
+        <p>
+          Created by Catherine F, Norman H, Brian W, and Kelly W. The source
+          code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+      </div>
     </footer>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+      <script src="/js/logout.js"></script>
     {{/if}}
-</body>
+  </body>
 
 </html>
