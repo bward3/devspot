@@ -20,17 +20,16 @@
     </div>
   </section>
 
-  <div class="row has-text-centered">
-    <div class="column is-2 is-inline-block">
-      <figure class="image is-128x128 is-inline-block">
-        <img
-          class="is-rounded"
-          src="https://bulma.io/images/placeholders/128x128.png"
-        />
-      </figure>
-      <p class="bd-notification is-info">User</p>
+  {{#each Users as |User|}}
+    <div class="row has-text-centered">
+      <div class="column is-2 is-inline-block">
+        <figure class="image is-128x128 is-inline-block">
+          <img class="is-rounded" src={{User.image}} />
+        </figure>
+        <p class="bd-notification is-info">{{User.username}}</p>
+      </div>
     </div>
-  </div>
+  {{/each}}
 
 {{else}}
   <section class="section">
