@@ -1,0 +1,92 @@
+[
+    {
+        "name": "HTML5",
+        "description": "",
+        "imageLink": "",
+        "use": "FrontEnd"
+    },
+    {
+        "name": "CSS3",
+        "description": "",
+        "imageLink": "",
+        "use": "FrontEnd"
+    },
+    {
+        "name": "JavaScript",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    },
+    {
+        "name": "Bootstrap",
+        "description": "",
+        "imageLink": "",
+        "use": "FrontEnd"
+    },
+    {
+        "name": "Vue.JS",
+        "description": "",
+        "imageLink": "",
+        "use": "FrontEnd"
+    },
+    {
+        "name": "Angular.JS",
+        "description": "",
+        "imageLink": "",
+        "use": "FrontEnd"
+    },
+    {
+        "name": "Python",
+        "description": "",
+        "imageLink": "",
+        "use": "BackEnd"
+    },
+    {
+        "name": "Ruby",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    },
+    {
+        "name": "PHP",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    },
+    {
+        "name": "Java",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    },
+    {
+        "name": "C++",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    },
+    {
+        "name": "Node.js",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    },
+    {
+        "name": "VSCode",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    },
+    {
+        "name": "Homebrew",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    },
+    {
+        "name": "GitBash",
+        "description": "",
+        "imageLink": "",
+        "use": ""
+    }
+]
