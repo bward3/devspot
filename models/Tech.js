@@ -24,7 +24,7 @@ Tech.init(
             allowNull: false,
         },
         use: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         }
     },
