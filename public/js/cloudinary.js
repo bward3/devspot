@@ -1,24 +1,31 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const response = await fetch('/api/signuploadwidget');
+    const response = await fetch('/api/sig/');
     const data = await response.json();
 
     const options = {
-        cloudName: data.cloudname,
+        cloudName: data.cloudName,
         apiKey: data.apiKey,
         uploadSignatureTimestamp: data.timestamp,
         uploadSignature: data.signature,
         cropping: true,
         sources: ['local'],
         multiple: false,
-        clientAllowedFormats: ["images"],
+        clientAllowedFormats: ['jpg','png','gif'],
         folder: 'devspot'
     }
+
+    console.log(options);
+
     const processResults = (error, result) => {
         if (!error && result && result.event === 'success') {
             console.log(result)
 
-            var str = JSON.stringify(result, null, 4);
-            document.getElementById("uwdata").innerHTML+=str;
+            const url = result.info.url;
+            // post url data to user model
+
+            console.log(url);
+        } else if (error) {
+            console.log(error);
         }
     }
 
@@ -26,5 +33,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         options,
         processResults
     );
-    document.getElementById('upload-widget').addEventListener('click', () => myWidget.open(), false);
-}
+    document.getElementById('upload-btn').addEventListener('click', () => myWidget.open(), false);
+});

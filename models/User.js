@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequalize');
+const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
-const sequalize = require('../config/connection');
+const sequelize = require('../config/connection');
 
 class User extends Model {}
 
@@ -31,6 +31,9 @@ User.init(
         validate: {
           len: [8],
         },
+      },
+      image_link: {
+        type: DataTypes.STRING,
       }
     },
     {

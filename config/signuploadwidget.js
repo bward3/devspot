@@ -1,4 +1,5 @@
 const cloudinary = require('cloudinary').v2;
+require('dotenv').config();
 
 // Configure your cloud name, API key and API secret:
 
@@ -13,7 +14,7 @@ const apiSecret = cloudinary.config().api_secret;
 
 const signUploadWidget = () => {
     const timestamp = Math.round((new Date).getTime() / 1000);
-    const sig = cloudinary.utils.api_sign_request({
+    const signature = cloudinary.utils.api_sign_request({
         timestamp: timestamp,
         source: 'uw',
         folder: 'devspot'
@@ -21,7 +22,7 @@ const signUploadWidget = () => {
 
     return {
         timestamp,
-        sig
+        signature
     }
 }
 
