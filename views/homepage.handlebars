@@ -1,84 +1,125 @@
 <section class="section">
-    <div class="container has-text-centered">
-        <figure class="image is-128x128 is-inline-block">
-            <img class="is-rounded" src="./images/DevSpot-logos-modified.png">
-        </figure>
-    </div>
+  <div class="container has-text-centered">
+    <figure class="image is-128x128 is-inline-block">
+      <img class="is-rounded" src="./images/DevSpot-logos-modified.png" />
+    </figure>
+  </div>
 </section>
 
-{{!-- Conditionally render the about section, 4 user profiles, and the login/sign up box if not logged in --}}
+{{! Conditionally render the about section, 4 user profiles, and the login/sign up box if not logged in }}
 {{#if logged_in}}
-<br><br>
 
-{{!-- add html and code for what the homepage will look like logged in --}}
-{{!-- use loop to render user profiles --}}
+  {{! add html and code for what the homepage will look like logged in }}
+  {{! use loop to render user profiles }}
+
+  <section class="hero has-text-centered">
+    <div class="hero-body">
+      <p class="title">
+        Developer Profiles
+      </p>
+    </div>
+  </section>
+
+  {{#each Users as |User|}}
+    <div class="row has-text-centered">
+      <div class="column is-2 is-inline-block">
+        <figure class="image is-128x128 is-inline-block">
+          <img class="is-rounded" src={{User.image}} />
+        </figure>
+        <p class="bd-notification is-info">{{User.username}}</p>
+      </div>
+    </div>
+  {{/each}}
 
 {{else}}
-<section class="section">
+  <section class="section">
     <div class="container has-text-centered">
-        <p class="is-size-5" style="color: #928f8f;">Use DevSpot to showcase your technology and
-            language proficiencies!
-            Sign up to allow
-            peers and potential employers to see your skills.</p>
+      <p class="is-size-5" style="color: #928f8f;">Use DevSpot to showcase your
+        technology and language proficiencies! Sign up to allow peers and
+        potential employers to see your skills.</p>
     </div>
-</section>
+  </section>
 
-<div class="columns is-vcentered">
+  <div class="columns is-vcentered">
     <div class="column">
-        <p class="bd-notification is-info has-text-centered" style="font-size: 1.5rem">User Profiles</p>
-        <div class="columns is-mobile">
-            <div class="column">
-                <div class='rows has-text-centered'>
-                    <figure class="image is-128x128 is-inline-block" style="margin: 2%">
-                        {{!-- add member 1 of team 4 image from seed data --}}
-                        <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                    </figure>
-                    {{!-- add name of team 4 member 1 from seed data --}}
-                    <p class="bd-notification is-info">User</p>
-                    <figure class="image is-128x128 is-inline-block" style="margin: 2%">
-                        {{!-- add member 2 of team 4 image from seed data --}}
-                        <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                    </figure>
-                    {{!-- add name of team 4 member 2 from seed data --}}
-                    <p class="bd-notification is-info">User</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class='rows has-text-centered'>
-                    <figure class="image is-128x128 is-inline-block" style="margin: 2%">
-                        {{!-- add member 3 of team 4 image from seed data --}}
-                        <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                    </figure>
-                    {{!-- add name of team 4 member 3 from seed data --}}
-                    <p class="bd-notification is-info">User</p>
-                    <figure class="image is-128x128 is-inline-block" style="margin: 2%">
-                        {{!-- add member 4 of team 4 image from seed data --}}
-                        <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                    </figure>
-                    {{!-- add name of team 4 member 4 from seed data --}}
-                    <p class="bd-notification is-info">User</p>
-                </div>
-            </div>
+      <p
+        class="bd-notification is-info has-text-centered"
+        style="font-size: 1.5rem"
+      >User Profiles</p>
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="rows has-text-centered">
+            <figure class="image is-128x128 is-inline-block" style="margin: 2%">
+              {{! add member 1 of team 4 image from seed data }}
+              <img
+                class="is-rounded"
+                src="https://bulma.io/images/placeholders/128x128.png"
+              />
+            </figure>
+            {{! add name of team 4 member 1 from seed data }}
+            <p class="bd-notification is-info">User</p>
+            <figure class="image is-128x128 is-inline-block" style="margin: 2%">
+              {{! add member 2 of team 4 image from seed data }}
+              <img
+                class="is-rounded"
+                src="https://bulma.io/images/placeholders/128x128.png"
+              />
+            </figure>
+            {{! add name of team 4 member 2 from seed data }}
+            <p class="bd-notification is-info">User</p>
+          </div>
         </div>
+        <div class="column">
+          <div class="rows has-text-centered">
+            <figure class="image is-128x128 is-inline-block" style="margin: 2%">
+              {{! add member 3 of team 4 image from seed data }}
+              <img
+                class="is-rounded"
+                src="https://bulma.io/images/placeholders/128x128.png"
+              />
+            </figure>
+            {{! add name of team 4 member 3 from seed data }}
+            <p class="bd-notification is-info">User</p>
+            <figure class="image is-128x128 is-inline-block" style="margin: 2%">
+              {{! add member 4 of team 4 image from seed data }}
+              <img
+                class="is-rounded"
+                src="https://bulma.io/images/placeholders/128x128.png"
+              />
+            </figure>
+            {{! add name of team 4 member 4 from seed data }}
+            <p class="bd-notification is-info">User</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="column">
-        <div class="columns is-centered">
-            <div class="column is-8">
-                <div class="box has-text-centered" style="width: 85%">
-                    <div class='rows'>
-                        <div class='row is-full'>
-                            <button class="button is-primary is-large"
-                                style="width: 75%; margin-top: 7%; margin-bottom: 3%;">Login</button>
-                        </div>
-                        <div class='row is-full'>
-                            <button class="button is-primary is-large"
-                                style="width: 75%; margin-bottom: 7%; margin-top: 3%;">Sign
-                                Up</button>
-                        </div>
-                    </div>
-                </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="box has-text-centered" style="width: 85%">
+            <div class="rows">
+              <div class="row is-full">
+                <button
+                  class="button is-primary is-large"
+                  style="width: 75%; margin-top: 7%; margin-bottom: 3%;"
+                ><a
+                    href="/login"
+                    style="text-decoration: none; color: white"
+                  >Login</a></button>
+              </div>
+              <div class="row is-full">
+                <button
+                  class="button is-primary is-large"
+                  style="width: 75%; margin-bottom: 7%; margin-top: 3%;"
+                ><a
+                    href="/login"
+                    style="text-decoration: none; color: white"
+                  >Sign Up</a></button>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 {{/if}}
