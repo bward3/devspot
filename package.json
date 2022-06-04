@@ -22,18 +22,14 @@
   },
   "homepage": "https://github.com/bward3/devspot#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^7.1.3",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "express-handlebars": "^6.0.6",
-    "express-session": "^1.17.3",
-    "mysql2": "^2.3.3",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^8.5.0",
-    "nodemon": "^2.0.16",
-    "prettier": "^2.6.2"
+    "bcrypt": "^5.0.0",
+    "cloudinary": "^1.30.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
   }
 }

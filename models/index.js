@@ -3,12 +3,12 @@ const Tech = require('./Tech');
 const Profile = require('./Profile');
 
 User.hasOne(Profile, {
-    foreignKey: 'profileId',
+    foreignKey: 'user_id',
     onDelete: "CASCADE"
 });
 
 Profile.belongsTo(User, {
-    foreignKey: 'username',
+    foreignKey: 'user_id',
     onDelete: "CASCADE"
 })
 
@@ -21,4 +21,4 @@ Tech.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Project, Profile }; 
+module.exports = { User, Tech, Profile }; 

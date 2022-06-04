@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequalize');
-const sequalize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 class Tech extends Model {}
 
@@ -19,7 +19,7 @@ Tech.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        imageLink: {
+        image_link: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -29,7 +29,7 @@ Tech.init(
         }
     },
     {
-        sequalize,
+        sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
