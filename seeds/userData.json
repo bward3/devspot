@@ -1,0 +1,26 @@
+[
+  {
+    "username": "cfoye",
+    "email": "cfoye@email.com",
+    "password": "password",
+    "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/css3-logo-stickers4_o1bzwo.jpg"
+  },
+  {
+    "username": "kwalsh",
+    "email": "kwalsh@email.com",
+    "password": "password",
+    "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/css3-logo-stickers4_o1bzwo.jpg"
+  },
+  {
+    "username": "nherrera",
+    "email": "nherrera@email.com",
+    "password": "password",
+    "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/css3-logo-stickers4_o1bzwo.jpg"
+  },
+  {
+    "username": "bward",
+    "email": "bward@email.com",
+    "password": "password",
+    "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/css3-logo-stickers4_o1bzwo.jpg"
+  }
+]

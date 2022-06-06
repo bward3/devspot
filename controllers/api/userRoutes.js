@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../../models");
+//const withAuth = require('../../utils/auth');
 
 router.post("/", async (req, res) => {
   try {
@@ -20,14 +21,14 @@ router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
       where: {
-        email: req.body.email
-      }
+        username: req.body.username,
+      },
     });
 
     if (!userData) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect username or password, please try again" });
       return;
     }
 
@@ -36,7 +37,7 @@ router.post("/login", async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect username or password, please try again" });
       return;
     }
 
