@@ -5,41 +5,42 @@
     </figure>
   </div>
 </section>
+{{! Conditionally render the about section, 4 user profiles, and the login/sign up box if not logged in }}
 
-<section class="section">
-  <div class="container has-text-centered">
-    <p class="is-size-5" style="color: #928f8f;">Use DevSpot to showcase your
-      technology and language proficiencies! Sign up to allow peers and
-      potential employers to see your skills.</p>
-  </div>
-</section>
+{{! add html and code for what the homepage will look like logged in }}
+{{! use loop to render user profiles }}
 
-<div class="columns is-vcentered">
-  {{! Conditionally render the about section, 4 user profiles, and the login/sign up box if not logged in }}
-  {{#if logged_in}}
+{{#if logged_in}}
+  <section class="hero has-text-centered">
+    <div class="hero-body">
+      <p class="title">
+        Developer Profiles
+      </p>
+    </div>
+  </section>
 
-    {{! add html and code for what the homepage will look like logged in }}
-    {{! use loop to render user profiles }}
-
-    <section class="hero has-text-centered">
-      <div class="hero-body">
-        <p class="title">
-          Developer Profiles
-        </p>
-      </div>
-    </section>
-
+  <div class="row has-text-centered">
     {{#each users}}
-      <div class="row has-text-centered">
-        <div class="column is-2 is-inline-block">
-          <figure class="image is-128x128 is-inline-block">
-            <img class="is-rounded" src={{image}} />
-          </figure>
-          <p class="bd-notification is-info">{{username}}</p>
-        </div>
+      <div class="column is-2 is-inline-block">
+        <figure class="image is-128x128 is-inline-block">
+          <a href="/profile" class="img"><img
+              class="is-rounded"
+              src={{image}}
+            /></a>
+        </figure>
+        <p class="bd-notification is-info has-text-weight-bold">{{username}}</p>
       </div>
     {{/each}}
-  {{else}}
+  </div>
+{{else}}
+  <section class="section">
+    <div class="container has-text-centered">
+      <p class="is-size-5" style="color: #928f8f;">Use DevSpot to showcase your
+        technology and language proficiencies! Sign up to allow peers and
+        potential employers to see your skills.</p>
+    </div>
+  </section>
+  <div class="columns is-vcentered">
     <div class="column">
       <p
         class="bd-notification is-info has-text-centered"
@@ -50,7 +51,7 @@
 
         <div class="column">
           <div class="rows has-text-centered">
-            {{!-- {{#each team}}
+            {{#each team}}
               <figure
                 class="image is-128x128 is-inline-block"
                 style="margin: 2%"
@@ -60,7 +61,7 @@
               </figure>
               {{! add name of team 4 member 1 from seed data }}
               <p class="bd-notification is-info">{{username}}</p>
-            {{/each}} --}}
+            {{/each}}
             <figure class="image is-128x128 is-inline-block" style="margin: 2%">
               {{! add member 2 of team 4 image from seed data }}
               <img
@@ -125,5 +126,5 @@
         </div>
       </div>
     </div>
-  {{/if}}
-</div>
+  </div>
+{{/if}}

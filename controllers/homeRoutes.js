@@ -13,16 +13,15 @@ router.get("/", async (req, res) => {
 
     const users = allUserData.map((user) => user.get({ plain: true }));
     //const team = selectUsers.map((user) => user.get({ plain: true }));
+
     res.render("homepage", {
-      logged_in: req.session.logged_in,
       users,
       //   team,
+      logged_in: req.session.logged_in,
     });
-  } catch (err) {}
-});
-
-router.get("/login", function (req, res) {
-  res.render("login");
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get("/profile", function (req, res) {
@@ -46,6 +45,16 @@ router.get("/profile", function (req, res) {
 
 router.get("/edit", function (req, res) {
   res.render("edit", {});
+});
+
+router.get("/login", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect("/profile");
+    return;
+  }
+
+  res.render("login");
 });
 
 module.exports = router;

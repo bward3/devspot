@@ -26,11 +26,11 @@
         </a>
     </div>
     <div id="navbarBasicExample" class="navbar-menu">
-        {{!-- <div class="navbar-start">
-            <a class="navbar-item">
+        <div class="navbar-start">
+            <a href="/" class="navbar-item">
                 Home
             </a>
-        </div> --}}
+        </div>
 
         <div class="navbar-end">
             <div class="navbar-item">
@@ -40,6 +40,9 @@
                     <a href="/profile" class="button">
                         Profile
                     </a>
+                    <a href="/edit" class="button">
+                        Edit Profile
+                    </a>
                     <a class="button is-light" id="logout">
                         Logout
                     </a>
@@ -48,14 +51,6 @@
                         Login
                     </a>
                     {{/if}}
-                    {{#if logged_in}}
-                    <a class="button">
-                        Edit Profile
-                    </a>
-                    {{/if}}
-                    <a class="navbar-item">
-                        Home
-                    </a>
                 </div>
             </div>
         </div>
@@ -64,9 +59,8 @@
     </div>
 </nav>
 
-{{!--
-
-<body style="background-color: #ffe2de"> --}}
+{{!-- style="background-color: #ffe2de" --}}
+<body>
     <!-- Render the sub layout -->
     {{{body}}}
 
