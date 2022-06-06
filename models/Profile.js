@@ -21,14 +21,9 @@ Profile.init(
                 model: 'user',
                 key: 'id'
             }
-        },
-        technologies: {
-            type: DataTypes.STRING,
-            references: {
-                model: 'technologies',
-                key: 'image_link'
         }
     },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
