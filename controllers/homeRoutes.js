@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Tech } = require("../models");
+const { User, Tech, Profile } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -59,6 +59,28 @@ router.get("/profile", withAuth, async (req, res) => {
     res.render("profile", {
       ...user,
       logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/profile/:id", async (req, res) => {
+  try {
+    const profileData = await Profile.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+    });
+
+    const profile = profileData.get({ plain: true });
+
+    res.render("profile", {
+      ...profile,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
