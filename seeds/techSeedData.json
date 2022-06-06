@@ -2,91 +2,91 @@
     {
         "name": "HTML5",
         "description": "The standard markup language for documents designed to be displayed in a web browser.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/html5-logo-12-300x300_v7plm9.png",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/html5-logo-12-300x300_v7plm9.png",
         "use": "FrontEnd"
     },
     {
         "name": "CSS3",
         "description": "A style sheet language used for describing the presentation of a document written in a markup language",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/css3-logo-stickers4_o1bzwo.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360528/css3-logo-stickers4_o1bzwo.jpg",
         "use": "FrontEnd"
     },
     {
         "name": "JavaScript",
         "description": "A programming language that is one of the core technologies of the World Wide Web",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/102114_Gaurang_JavaScript-and-the.large_xccmhl.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360528/102114_Gaurang_JavaScript-and-the.large_xccmhl.jpg",
         "use": "Programming Language"
     },
     {
         "name": "Bootstrap",
         "description": "A free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/fi-onpuxl-bootstrap-b_ejggau.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360528/fi-onpuxl-bootstrap-b_ejggau.jpg",
         "use": "FrontEnd"
     },
     {
         "name": "Vue.JS",
         "description": "an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/150-1507248_image-library-stock-file-vue-js-logo-wikimedia_nwyu6p.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360528/150-1507248_image-library-stock-file-vue-js-logo-wikimedia_nwyu6p.jpg",
         "use": "FrontEnd"
     },
     {
         "name": "Angular.JS",
         "description": "a JavaScript-based open-source front-end web framework for developing single-page applications",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/angular_xlsdfg.png",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360528/angular_xlsdfg.png",
         "use": "FrontEnd"
     },
     {
         "name": "Python",
         "description": "A high-level, interpreted, general-purpose programming language.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/python_y842pb.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/python_y842pb.jpg",
         "use": "Programming Language"
     },
     {
         "name": "Ruby",
         "description": "An interpreted, high-level, general-purpose programming language which supports multiple programming paradigms.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/ruby_ykqdou.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/ruby_ykqdou.jpg",
         "use": "Programming Language"
     },
     {
         "name": "PHP",
         "description": "A general-purpose scripting language geared toward web development",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/php-logo_ybqrdu.png",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/php-logo_ybqrdu.png",
         "use": "Programming Language"
     },
     {
         "name": "Java",
         "description": "A high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/java_pxgjzo.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/java_pxgjzo.jpg",
         "use": "Programming Language"
     },
     {
         "name": "C++",
         "description": "A general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or 'C with Classes'.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360528/c_o7r6xm.png",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360528/c_o7r6xm.png",
         "use": "Programming Language"
     },
     {
         "name": "Node.js",
         "description": "an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/node_ojjkzz.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/node_ojjkzz.jpg",
         "use": "BackEnd"
     },
     {
         "name": "VSCode",
         "description": "A source-code editor made by Microsoft for Windows, Linux and macOS.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/vscode_fefil0.png",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/vscode_fefil0.png",
         "use": "Extra"
     },
     {
         "name": "Homebrew",
         "description": "A free and open-source software package management system that simplifies the installation of software on Apple's operating system, macOS, as well as Linux.",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/homebrew-256x256_u380yy.png",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/homebrew-256x256_u380yy.png",
         "use": "Extra"
     },
     {
         "name": "GitBash",
         "description": "A software for tracking changes in any set of files",
-        "imageLink": "https://res.cloudinary.com/norher/image/upload/v1654360529/gitbash_cjq6eg.jpg",
+        "image_link": "https://res.cloudinary.com/norher/image/upload/v1654360529/gitbash_cjq6eg.jpg",
         "use": "Extra"
     }
 ]

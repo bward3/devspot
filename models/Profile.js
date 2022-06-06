@@ -22,6 +22,23 @@ Profile.init(
         key: "id",
       },
     },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    gitHub: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    linkedIn: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
   },
   {
     sequelize,
