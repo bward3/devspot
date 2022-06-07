@@ -35,7 +35,7 @@ Profile.init(
       allowNull: true,
     },
     bio: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT('medium'),
       allowNull: true,
     },
   },
