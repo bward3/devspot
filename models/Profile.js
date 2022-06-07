@@ -13,7 +13,7 @@ Profile.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -30,13 +30,13 @@ Profile.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    linkedIn: {
+    linkedin: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     bio: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
 
   },
