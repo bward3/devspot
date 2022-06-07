@@ -110,3 +110,25 @@
     display: flex;
     justify-content: center;
 }
+
+.users-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+}
+
+.user figure {
+    width: 100%;
+}
+.user p {
+    width: 100%;
+    text-align: center;
+}

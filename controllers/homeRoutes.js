@@ -12,9 +12,16 @@ router.get("/", async (req, res) => {
   try {
     const allUserData = await User.findAll();
 
-    const users = allUserData.map((user) => user.get({
+    var users = allUserData.map((user) => user.get({
       plain: true
     }));
+
+    if (!req.session.logged_in) {
+      users = users.slice(0, 4);
+      console.log('truuuu');
+    }
+
+    console.log(req.session);
 
     res.render("homepage", {
       users,
@@ -23,6 +30,7 @@ router.get("/", async (req, res) => {
     });
   } catch (err) {
     res.status(500).json(err);
+    console.log(err);
   }
 });
 
@@ -57,7 +65,7 @@ router.get("/profile/:id", async (req, res) => {
           break;
         case 'BackEnd':
           be_techs.push(tech);
-        default :
+        default:
           other_techs.push(tech);
       }
     });

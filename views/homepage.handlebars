@@ -54,8 +54,20 @@
         class="bd-notification is-info has-text-centered"
         style="font-size: 1.5rem"
       >User Profiles</p>
-
-      <div class="columns is-mobile">
+      <div class="users-div">
+      {{#each users}}
+        <div class="user">
+          <figure class="image is-128x128 is-inline-block">
+            <a href="/login" class="img"><img
+                  class="is-rounded"
+                  src="{{image_link}}"
+                /></a>
+          </figure>
+          <p class="bd-notification is-info has-text-weight-bold">{{username}}</p>
+        </div>
+      {{/each}}
+      </div>
+      {{!-- <div class="columns is-mobile">
 
         <div class="column">
           <div class="rows has-text-centered">
@@ -102,7 +114,7 @@
             <p class="bd-notification is-info has-text-weight-bold">kwalsh</p>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
     <div class="column">
       <div class="columns is-mobile is-centered">

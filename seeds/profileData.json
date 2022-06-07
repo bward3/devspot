@@ -1,22 +1,34 @@
 [
   {
     "id": 1,
-    "name": "cfoye",
-    "user_id": 1
-  },
+    "name": "Catherine Foye",
+    "user_id": 1,
+    "location": "Denver, CO",
+    "bio": "Just a small town girl Livin' in a lonely world She took the midnight train going anywhere Just a city boy Born and raised in South Detroit He took the midnight train going anywhere A singer in a smokey room A smell of wine and cheap perfume For a smile they can share the night It goes on and on and on and on",
+    "github": "bward3",
+    "linkedin": "brianwardcs"   },
   {
     "id": 2,
-    "name": "kwalsh",
-    "user_id": 2
-  },
+    "name": "Kelly Walsh",
+    "user_id": 2,
+    "location": "Denver, CO",
+    "bio": "Just a small town girl Livin' in a lonely world She took the midnight train going anywhere Just a city boy Born and raised in South Detroit He took the midnight train going anywhere A singer in a smokey room A smell of wine and cheap perfume For a smile they can share the night It goes on and on and on and on",
+    "github": "bward3",
+    "linkedin": "brianwardcs"   },
   {
     "id": 3,
-    "name": "nherrera",
-    "user_id": 3
-  },
+    "name": "Norman Herrera",
+    "user_id": 3,
+    "location": "Denver, CO",
+    "bio": "Just a small town girl Livin' in a lonely world She took the midnight train going anywhere Just a city boy Born and raised in South Detroit He took the midnight train going anywhere A singer in a smokey room A smell of wine and cheap perfume For a smile they can share the night It goes on and on and on and on",
+    "github": "bward3",
+    "linkedin": "brianwardcs"   },
   {
     "id": 4,
-    "name": "bward",
-    "user_id": 4
-  }
+    "name": "Brian Ward",
+    "user_id": 4,
+    "location": "Denver, CO",
+    "bio": "Just a small town girl Livin' in a lonely world She took the midnight train going anywhere Just a city boy Born and raised in South Detroit He took the midnight train going anywhere A singer in a smokey room A smell of wine and cheap perfume For a smile they can share the night It goes on and on and on and on",
+    "github": "bward3",
+    "linkedin": "brianwardcs"   }
 ]
