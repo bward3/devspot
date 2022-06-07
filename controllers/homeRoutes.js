@@ -67,14 +67,7 @@ router.get("/profile", withAuth, async (req, res) => {
 
 router.get("/profile/:id", async (req, res) => {
   try {
-    const profileData = await Profile.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
-    });
+    const profileData = await Profile.findByPk(req.params.id);
 
     const profile = profileData.get({ plain: true });
 

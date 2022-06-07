@@ -28,20 +28,22 @@ document.querySelector("#editBtn").addEventListener("click", async function() {
     var image_link = document.querySelector("#picture-div").getAttribute('data-src');
     // add fetch /api/profile
 
-    const res = await fetch('/api/profile', {
-        method: 'POST',
-        body: JSON.stringify({
-            name,
-            bio,
-            linkedin,
-            github,
-            location
-        }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
-    if (res.ok) {
-        console.log('success')
-    }
+    // const res = await fetch('/api/profile', {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //         name,
+    //         bio,
+    //         linkedin,
+    //         github,
+    //         location
+    //     }),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    // });
+    // if (res.ok) {
+    //     console.log('success')
+    // }
+
+    //should be put request
 });
