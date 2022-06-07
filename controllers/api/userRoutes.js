@@ -1,5 +1,8 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const {
+  User,
+  Tech
+} = require("../../models");
 const withAuth = require('../../utils/auth');
 
 router.post("/", async (req, res) => {
@@ -20,25 +23,25 @@ router.post("/", async (req, res) => {
 
 router.put('/', withAuth, async (req, res) => {
   try {
-      console.log('TRYING TO ADD image_link TO: ');
-      console.log(req.session.user_id);
-      const userData = await User.update({
-          ...req.body
-      }, {
-          where: {
-              id: req.session.user_id
-          }
-      });
-      if (!userData) {
-          res.status(404).json({
-              message: 'No post found with that id!'
-          });
-          return;
+    console.log('TRYING TO ADD image_link TO: ');
+    console.log(req.session.user_id);
+    const userData = await User.update({
+      ...req.body
+    }, {
+      where: {
+        id: req.session.user_id
       }
-      res.status(200).json(userData);
+    });
+    if (!userData) {
+      res.status(404).json({
+        message: 'No post found with that id!'
+      });
+      return;
+    }
+    res.status(200).json(userData);
   } catch (err) {
-      console.log(err);
-      res.status(400).json(err);
+    console.log(err);
+    res.status(400).json(err);
   }
 });
 
@@ -53,7 +56,9 @@ router.post("/login", async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: "Incorrect username" });
+        .json({
+          message: "Incorrect username"
+        });
       return;
     }
 
@@ -62,7 +67,9 @@ router.post("/login", async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: "Incorrect password, please try again" });
+        .json({
+          message: "Incorrect password, please try again"
+        });
       return;
     }
 
@@ -70,7 +77,10 @@ router.post("/login", async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.json({ user: userData, message: "You are now logged in!" });
+      res.json({
+        user: userData,
+        message: "You are now logged in!"
+      });
     });
   } catch (err) {
     res.status(400).json(err);
@@ -84,6 +94,40 @@ router.post("/logout", (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.post("/tech", async (req, res) => {
+  try {
+    console.log(req.body.techs.length);
+    if (!req.body.techs.length == 0) {
+      const user = await User.findByPk(req.session.user_id);
+      req.body.techs.forEach( async (techData) => {
+        const tech = await Tech.findByPk(techData.id);
+        user.addTech(tech, {
+          through: {
+            proficiency: techData.proficiency
+          }
+        });
+      });
+      res.status(200).json({ message: "added techs!" })
+    }
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.get("/:id/tech", async (req, res) => {
+  try {
+    const techData = await User.findByPk(req.params.id,
+      {
+        include: {
+          model: Tech
+        }
+      });
+    res.status(200).json(techData);
+  } catch (err) {
+    res.status(400).json(err);
   }
 });
 

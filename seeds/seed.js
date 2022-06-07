@@ -2,14 +2,12 @@ const sequelize = require('../config/connection');
 const {
     Profile,
     User,
-    Tech,
-    UserTech
+    Tech
 } = require('../models');
 
 const techSeedData = require('./techSeedData.json');
 const userSeedData = require('./userData.json');
 const profileSeedData = require('./profileData.json');
-// const userTechSeedData = require('./userTechData.json');
 
 
 

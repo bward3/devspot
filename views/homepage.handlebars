@@ -23,10 +23,10 @@
     {{#each users}}
       <div class="column is-2 is-inline-block">
         <figure class="image is-128x128 is-inline-block">
-          {{#if image}}
+          {{#if image_link}}
             <a href="/profile/{{id}}" class="img"><img
                 class="is-rounded"
-                src={{image}}
+                src={{image_link}}
               /></a>
           {{else}}
             <a href="/profile/{{id}}" class="img"><img
@@ -108,7 +108,7 @@
       <div class="columns is-mobile is-centered">
         <div class="column is-8">
           <div class="box has-text-centered" style="width: 85%">
-            <div class="rows">
+            <div class="rows align-items-center">
               <div class="row is-full">
                 <button
                   class="button is-large"

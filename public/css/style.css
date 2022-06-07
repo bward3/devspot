@@ -37,8 +37,8 @@
     display: flex;
     border: 2px black solid;
     justify-content: space-between;
-    width: 30%;
-    height: 100%;
+    width: 100px;
+    height: 20px;
 }
 
 .prof-meter-0 {
@@ -85,4 +85,28 @@
 #techContainer div {
     display: flex;
     justify-content: space-between;
+}
+
+/* .container.box.tech {
+    display: flex;
+    flex-direction: column;
+} */
+
+.tech-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    margin: 10px;
+}
+
+.tech-div img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.tech-container {
+    display: flex;
+    justify-content: center;
 }

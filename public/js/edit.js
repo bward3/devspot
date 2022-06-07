@@ -2,6 +2,7 @@ var techBtn = document.getElementById('addTechBtn');
 techBtn.disabled = true;
 var currentId;
 var numTechs = 0;
+var lastClicked;
 
 // Dropdown Add Tech
 document.querySelector("#dropdownBtn").addEventListener("click", function () {
@@ -13,6 +14,7 @@ document.querySelectorAll(".dropdown-item").forEach(function (item) {
         document.querySelector("#dropdownTitle").textContent = event.target.textContent;
         document.querySelector("#dropdown-menu3").classList.add("is-hidden");
         currentId = event.target.getAttribute('data-id');
+        lastClicked = event.target;
         techBtn.disabled = false;
     })
 });
@@ -34,7 +36,9 @@ techBtn.addEventListener('click', () => {
     newTech.setAttribute('data-proficiency', proficiency);
     newTech.classList.add('new-tech');
     techContainer.append(newTech);
-    numTechs+=1;
+    lastClicked.remove();
+    document.querySelector("#dropdownTitle").textContent = "Click me"
+    techBtn.disabled = true;
 });
 
 document.querySelector("#editBtn").addEventListener("click", async function () {
@@ -70,13 +74,32 @@ document.querySelector("#editBtn").addEventListener("click", async function () {
                     'Content-Type': 'application/json'
                 }
             });
-            if (userResponse.ok) {
-                document.location.replace("/profile");
-            } else {
-                alert("Something went wrong.")
-            }
+            // if (userResponse.ok) {
+            //     document.location.replace("/profile");
+            // } else {
+            //     alert("Something went wrong.")
+            // }
         }
     }
 
+    //add techs
+    var techs = [];
+    document.querySelectorAll('.new-tech').forEach((techDiv) => {
+        let tech = {
+            id: techDiv.getAttribute('data-id'),
+            proficiency: techDiv.getAttribute('data-proficiency')
+        }
+        techs.push(tech);
+    });
+    console.log(techs);
+    response = await fetch('/api/users/tech', {
+        method: 'POST',
+        body: JSON.stringify({
+            techs
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
     //should be put request
 });

@@ -1,7 +1,7 @@
 <!-- HEADER -->
 <header class="header container block pt-6">
     <h1 class="title has-text-centered is-1">
-        DevSpot
+        {{profile.name}}
     </h1>
     </div>
 </header>
@@ -16,7 +16,7 @@
             </figure>
             <aside class="menu profile">
                 <p class="menu-name title">
-                    {{profile.name}}
+                    {{username}}
                 </p>
                 <p class="menu-location">
                     {{profile.location}}
@@ -49,29 +49,21 @@
 
             <!-- FRONT END -->
             <div class="container box tech">
-                <p class="title frontEnd is-size-3">
-                    Front End Tech
-                </p>
-                <p>
-                    {{#if expertise.html}}
-                    <i class="fa-brands fa-html5 fa-2xl p-5 is-size-{{expertise.html}}">HTML</i>
-                    {{/if}}
-                    {{#if expertise.css}}
-                    <i class="fa-brands fa-css3 fa-2xl p-5 is-size-{{expertise.css}}">CSS</i>
-                    {{/if}}
-                    {{#if expertise.javaScript}}
-                    <i class="fa-brands fa-js-square fa-2xl p-5 is-size-5">JavaScript</i>
-                    {{/if}}
-                    {{#if expertise.bootstrap}}
-                    <i class="fa-brands fa-bootstrap fa-2xl p-5">Bootstrap</i>
-                    {{/if}}
-                    {{#if expertise.vueJs}}
-                    <i class="fa-brands fa-vuejs fa-2xl p-5">Vue.JS</i>
-                    {{/if}}
-                    {{#if expertise.angular}}
-                    <i class="fa-brands fa-angular fa-2xl p-5">Angular</i>
-                    {{/if}}
-                </p>
+                <div class="col-12">
+                    <p class="title frontEnd is-size-3">
+                        Front End Tech
+                    </p>
+                </div>
+
+                <div class="tech-container">
+                    {{#each fe_techs}}
+                    <div class="tech-div"><img src="{{image_link}}">
+                        <div class="prof-container">
+                            <div class="prof-meter-{{user_tech.proficiency}}"></div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
             <!-- END FRONT END -->
 
@@ -80,26 +72,15 @@
                 <p class="title backEnd is-size-3">
                     Back End Tech
                 </p>
-                <p>
-                    {{#if expertise.python}}
-                    <i class="fa-brands fa-python fa-2xl p-5">Python</i>
-                    {{/if}}
-                    {{#if expertise.ruby}}
-                    <i class="fa-solid fa-gem fa-2xl p-5 is-size-{{expertise.ruby}}">Ruby</i>
-                    {{/if}}
-                    {{#if expertise.php}}
-                    <i class="fa-brands fa-php fa-2xl p-5">PHP</i>
-                    {{/if}}
-                    {{#if expertise.java}}
-                    <i class="fa-brands fa-java fa-2xl p-5">Java</i>
-                    {{/if}}
-                    {{#if expertise.cPlusPlus}}
-                    <i class="fa-solid fa-code fa-2xl p-5">C++</i>
-                    {{/if}}
-                    {{#if expertise.nodeJs}}
-                    <i class="fa-brands fa-node fa-2xl p-5 is-size-{{expertise.nodeJs}}">Node.JS</i>
-                    {{/if}}
-                </p>
+                <div class="tech-container">
+                    {{#each be_techs}}
+                    <div class="tech-div"><img src="{{image_link}}">
+                        <div class="prof-container">
+                            <div class="prof-meter-{{user_tech.proficiency}}"></div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
             <!-- END BACK END -->
 
@@ -108,23 +89,15 @@
                 <p class="title  otherTech is-size-3">
                     Other Tech
                 </p>
-                <p>
-                    {{#if expertise.vsCode}}
-                    <i class="fa-solid fa-desktop fa-2xl p-5">VS Code</i>
-                    {{/if}}
-                    {{#if expertise.microsoft}}
-                    <i class="fa-brands fa-microsoft fa-2xl p-5">Microsoft</i>
-                    {{/if}}
-                    {{#if expertise.apple}}
-                    <i class="fa-brands fa-apple fa-2xl p-5 is-size-{{expertise.apple}}">Apple</i>
-                    {{/if}}
-                    {{#if expertise.homebrew}}
-                    <i class="fa-solid fa-beer-mug fa-2xl p-5">Homebrew</i>
-                    {{/if}}
-                    {{#if expertise.bash}}
-                    <i class="fa-solid fa-hashtag fa-2xl p-5 is-size-{{expertise.bash}}">Bash</i>
-                    {{/if}}
-                </p>
+                <div class="tech-container">
+                    {{#each other_techs}}
+                    <div class="tech-div"><img src="{{image_link}}">
+                        <div class="prof-container">
+                            <div class="prof-meter-{{user_tech.proficiency}}"></div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
         </div>
     </div>
