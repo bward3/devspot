@@ -38,6 +38,7 @@ User.init(
     },
     image_link: {
       type: DataTypes.STRING,
+      defaultValue: "https://bulma.io/images/placeholders/128x128.png"
     },
   },
   {

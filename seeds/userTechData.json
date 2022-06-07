@@ -1,0 +1,37 @@
+[
+    {
+        "user_id": 1,
+        "tech_id": 1,
+        "proficiency": 5
+    },
+    {
+        "user_id": 2,
+        "tech_id": 2,
+        "proficiency": 5
+    },
+    {
+        "user_id": 3,
+        "tech_id": 3,
+        "proficiency": 5
+    },
+    {
+        "user_id": 4,
+        "tech_id": 4,
+        "proficiency": 5
+    },
+    {
+        "user_id": 4,
+        "tech_id": 6,
+        "proficiency": 5
+    },
+    {
+        "user_id": 4,
+        "tech_id": 8,
+        "proficiency": 5
+    },
+    {
+        "user_id": 1,
+        "tech_id": 3,
+        "proficiency": 5
+    }
+]

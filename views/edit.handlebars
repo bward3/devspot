@@ -50,70 +50,25 @@
                 </div>
                 <div class="dropdown-menu is-hidden" id="dropdown-menu3" role="menu">
                     <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">
-                            HTML
+                        {{#each techs}}
+                        <a href="#" class="dropdown-item" data-id="{{id}}">
+                            {{name}}
                         </a>
-                        <a href="#" class="dropdown-item">
-                            CSS
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            JavaScript
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Bootstrap
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Vue.JS
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Angular
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Python
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Ruby
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            PHP
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Java
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            C++
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Node.JS
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            VS Code
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Microsoft
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Apple
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Homebrew
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Bash
-                        </a>
+                        {{/each}}
                     </div>
                 </div>
             </div>
             <!-- 1=Beginner 2=Intermediate 3=Advanced -->
             <p id="slider">Beginner
                 {{!-- <input class="slider is-fullwidth" min="1" max="3" value="0" type="range"> --}}
-                <input id="sliderWithValue" class="slider has-output is-fullwidth" min="1" max="3" value="0" step="1"
+                <input id="sliderWithValue" class="slider has-output is-fullwidth" min="0" max="4" value="2" step="1"
                     type="range"></input>
                 <output for="sliderWithValue">Advanced</output>
             </p>
             <div class="btnWrapper">
-                <button class="button mt-5" id="editSubmitBtn">Submit</button>
+                <button class="button mt-5" id="addTechBtn">Add</button>
             </div>
+            <div id = "techContainer"></div>
         </div>
     </div>
 </section>
