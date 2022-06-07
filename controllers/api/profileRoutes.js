@@ -26,7 +26,7 @@ router.put('/', withAuth, async (req, res) => {
                 id: req.session.user_id
             }
         });
-        if (!postData) {
+        if (!profileData) {
             res.status(404).json({
                 message: 'No post found with that id!'
             });
@@ -34,6 +34,7 @@ router.put('/', withAuth, async (req, res) => {
         }
         res.status(200).json(profileData);
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });

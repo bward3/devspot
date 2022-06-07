@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".navbar-burger"),
     0
   );
-  console.log($navbarBurgers);
   // Add a click event on each of them
   $navbarBurgers.forEach((el) => {
     el.addEventListener("click", () => {
