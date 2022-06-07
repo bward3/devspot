@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { Profile } = require("../../models");
 const withAuth = require('../../utils/auth');
 
+
 router.post("/", /*withAuth,*/ async (req, res) => {
     try {
         const newProfile = await Profile.create(req.body);
