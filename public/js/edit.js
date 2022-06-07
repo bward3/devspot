@@ -22,24 +22,32 @@ document.querySelectorAll(".dropdown-item").forEach( function(item) {
 
 
 
-document.querySelector("#editBtn").addEventListener("click", function() {
-    var profile = {};
-    profile.name = document.querySelector("#editName").value;
-    profile.location = document.querySelector("#editLocation").value;
-    profile.bio = document.querySelector("#editBio").value;
-    profile.linkedIn = document.querySelector("#editLinkedIn").value;
-    profile.gitHub = document.querySelector("#editGitHub").value;
-    // add fethch /api/profile
-    fetch("/profile", {
-  method: 'POST',
-  credentials: 'same-origin', // include, *same-origin, omit
-  redirect: 'follow', // manual, *follow, error
-  body: profile
-})
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
+
+document.querySelector("#editBtn").addEventListener("click", async function() {
+    var name = document.querySelector("#editName").value.trim();
+    var location = document.querySelector("#editLocation").value.trim();
+    var bio = document.querySelector("#editBio").value.trim();
+    var linkedin = document.querySelector("#editLinkedIn").value.trim();
+    var github = document.querySelector("#editGitHub").value.trim();
+    var image_link = document.querySelector("#picture-div").getAttribute('data-src');
+    // add fetch /api/profile
+
+    // const res = await fetch('/api/profile', {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //         name,
+    //         bio,
+    //         linkedin,
+    //         github,
+    //         location
+    //     }),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    // });
+    // if (res.ok) {
+    //     console.log('success')
+    // }
+
+    //should be put request
 });

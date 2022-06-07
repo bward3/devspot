@@ -67,14 +67,7 @@ router.get("/profile", withAuth, async (req, res) => {
 
 router.get("/profile/:id", async (req, res) => {
   try {
-    const profileData = await Profile.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
-    });
+    const profileData = await Profile.findByPk(req.params.id);
 
     const profile = profileData.get({ plain: true });
 
@@ -103,6 +96,7 @@ router.get("/edit", withAuth, async (req, res) => {
       logged_in: true,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

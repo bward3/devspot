@@ -1,17 +1,21 @@
 [
   {
+    "id": 1,
     "name": "cfoye",
     "user_id": 1
   },
   {
+    "id": 2,
     "name": "kwalsh",
     "user_id": 2
   },
   {
+    "id": 3,
     "name": "nherrera",
     "user_id": 3
   },
   {
+    "id": 4,
     "name": "bward",
     "user_id": 4
   }
