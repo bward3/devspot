@@ -1,23 +1,22 @@
 const router = require("express").Router();
-const { User, Tech, Profile } = require("../models");
+const {
+  User,
+  Tech,
+  Profile
+} = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   // if logged in find all users if not find all users where the username = ?
   try {
     const allUserData = await User.findAll();
-    // const selectUsers = await User.findAll({
-    //   where: {
-    //     $or: [{ username: "cfoye" }, { username: "bward" }],
-    //   },
-    // });
 
-    const users = allUserData.map((user) => user.get({ plain: true }));
-    //const team = selectUsers.map((user) => user.get({ plain: true }));
+    const users = allUserData.map((user) => user.get({
+      plain: true
+    }));
 
     res.render("homepage", {
       users,
-      //   team,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -25,36 +24,24 @@ router.get("/", async (req, res) => {
   }
 });
 
-// router.get("/profile", function (req, res) {
-//   res.render("profile");
-//   // {
-//   // Example User
-//   //   userName: "Bob Smith",
-//   //   location: "Denver, Colorado",
-//   //   gitHub: "coolkidBob",
-//   //   linkedIn: "BobSmith55",
-//   //   bio: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium vitae suscipit voluptates, facere placeat praesentium laboriosam. Itaque commodi, consequatur necessitatibus facere nemo quis aperiam, vitae incidunt maxime id numquam optio!",
-//   //   expertise: {
-//   //     html: 1,
-//   //     css: 1,
-//   //     ruby: 3,
-//   //     nodeJs: 5,
-//   //     apple: 1,
-//   //     bash: 5,
-//   //   },
-//   // });
-// });
-
 // Use withAuth middleware to prevent access to route
 router.get("/profile", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
-      include: [{ model: Tech }],
+      attributes: {
+        exclude: ["password"]
+      },
+      include: [{
+        model: Profile
+      }]
     });
 
-    const user = userData.get({ plain: true });
+    const user = userData.get({
+      plain: true
+    });
+
+    console.log(user);
 
     res.render("profile", {
       ...user,
@@ -69,7 +56,9 @@ router.get("/profile/:id", async (req, res) => {
   try {
     const profileData = await Profile.findByPk(req.params.id);
 
-    const profile = profileData.get({ plain: true });
+    const profile = profileData.get({
+      plain: true
+    });
 
     res.render("profile", {
       ...profile,
@@ -85,14 +74,26 @@ router.get("/edit", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
-      include: [{ model: Tech }],
+      attributes: {
+        exclude: ["password"]
+      },
+      include: [{
+        model: Tech
+      }],
     });
+    const techData = await Tech.findAll();
+    const techs = techData.map((tech) => tech.get({
+      plain: true
+    }));
 
-    const user = userData.get({ plain: true });
+
+    const user = userData.get({
+      plain: true
+    });
 
     res.render("edit", {
       ...user,
+      techs,
       logged_in: true,
     });
   } catch (err) {
@@ -100,10 +101,6 @@ router.get("/edit", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// router.get("/edit", function (req, res) {
-//   res.render("edit", {});
-// });
 
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
