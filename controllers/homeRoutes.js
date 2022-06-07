@@ -65,6 +65,7 @@ router.get("/profile/:id", async (req, res) => {
           break;
         case 'BackEnd':
           be_techs.push(tech);
+          break;
         default:
           other_techs.push(tech);
       }

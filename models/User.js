@@ -38,7 +38,7 @@ User.init(
     },
     image_link: {
       type: DataTypes.STRING,
-      defaultValue: "./images/avatar.jpg"
+      defaultValue: "https://res.cloudinary.com/dcvzcwxen/image/upload/v1654640097/devspot/avatar.jpg"
     },
   },
   {

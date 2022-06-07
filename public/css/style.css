@@ -132,3 +132,7 @@
     width: 100%;
     text-align: center;
 }
+
+figure img {
+    border-radius: 50%;
+}
