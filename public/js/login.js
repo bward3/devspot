@@ -9,8 +9,13 @@ const loginFormHandler = async (event) => {
     // Send a POST request to the API endpoint
     const response = await fetch("/api/users/login", {
       method: "POST",
-      body: JSON.stringify({ username, password }),
-      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username,
+        password
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      },
     });
 
     if (response.ok) {
@@ -34,12 +39,36 @@ const signupFormHandler = async (event) => {
   if (username && email && password) {
     const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify({ username, email, password }),
-      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username,
+        email,
+        password
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      },
     });
 
+    const userData = await response.json();
+    const user_id = userData.id;
+
     if (response.ok) {
-      document.location.replace("/");
+      //create blank profile for new user
+      const res = await fetch("/api/profile", {
+        method: "POST",
+        body: JSON.stringify({
+          user_id: user_id
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        },
+      });
+      if (res.ok) {
+        document.location.replace("/");
+      } else {
+        alert("Something went wrong.")
+      }
+
     } else {
       alert(response.statusText);
     }

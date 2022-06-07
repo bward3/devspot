@@ -4,14 +4,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const options = {
         cloudName: data.cloudName,
-        apiKey: data.apiKey,
-        uploadSignatureTimestamp: data.timestamp,
-        uploadSignature: data.signature,
-        cropping: true,
-        sources: ['local'],
-        multiple: false,
-        clientAllowedFormats: ['jpg','png','gif'],
-        folder: 'devspot'
+        uploadPreset: 'ds_default'
+        // apiKey: data.apiKey,
+        // uploadSignatureTimestamp: data.timestamp,
+        // uploadSignature: data.signature,
+        // cropping: true,
+        // sources: ['local'],
+        // multiple: false,
+        // clientAllowedFormats: ['jpg','png','gif'],
+        // folder: 'devspot'
     }
 
     console.log(options);
@@ -22,8 +23,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const url = result.info.url;
             // post url data to user model
+            var profImg = document.createElement('img');
+            profImg.setAttribute('src', url);
+            profImg.classList.add('thumbnail');
+            var picContainer = document.getElementById('picture-div');
+            picContainer.append(profImg);
+            picContainer.setAttribute('data-src', url);
 
-            console.log(url);
         } else if (error) {
             console.log(error);
         }
