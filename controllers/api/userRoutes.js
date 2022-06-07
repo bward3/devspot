@@ -18,6 +18,27 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put('/', withAuth, async (req, res) => {
+  try {
+      const userData = await User.update({
+          ...req.body
+      }, {
+          where: {
+              id: req.session.user_id
+          }
+      });
+      if (!postData) {
+          res.status(404).json({
+              message: 'No post found with that id!'
+          });
+          return;
+      }
+      res.status(200).json(profileData);
+  } catch (err) {
+      res.status(400).json(err);
+  }
+});
+
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({

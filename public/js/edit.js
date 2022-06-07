@@ -28,22 +28,37 @@ document.querySelector("#editBtn").addEventListener("click", async function() {
     var image_link = document.querySelector("#picture-div").getAttribute('data-src');
     // add fetch /api/profile
 
-    // const res = await fetch('/api/profile', {
-    //     method: 'POST',
-    //     body: JSON.stringify({
-    //         name,
-    //         bio,
-    //         linkedin,
-    //         github,
-    //         location
-    //     }),
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    // });
-    // if (res.ok) {
-    //     console.log('success')
-    // }
+    const response = await fetch('/api/profile', {
+        method: 'PUT',
+        body: JSON.stringify({
+            name,
+            bio,
+            linkedin,
+            github,
+            location
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    if (response.ok) {
+        if (image_link) {
+            const userResponse = await fetch('/api/profile', {
+                method: 'PUT',
+                body: JSON.stringify({
+                    image_link
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            if (userResponse.ok) {
+                document.location.replace("/profile");
+            } else {
+                alert("Something went wrong.")
+            }
+        }
+    }
 
     //should be put request
 });
