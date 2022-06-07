@@ -74,11 +74,6 @@ document.querySelector("#editBtn").addEventListener("click", async function () {
                     'Content-Type': 'application/json'
                 }
             });
-            // if (userResponse.ok) {
-            //     document.location.replace("/profile");
-            // } else {
-            //     alert("Something went wrong.")
-            // }
         }
     }
 
@@ -101,5 +96,10 @@ document.querySelector("#editBtn").addEventListener("click", async function () {
             'Content-Type': 'application/json'
         }
     });
+    if (response.ok) {
+        document.location.replace("/profile");
+    } else {
+        alert("Something went wrong.")
+    }
     //should be put request
 });

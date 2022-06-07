@@ -17,6 +17,7 @@ router.post("/", withAuth, async (req, res) => {
 
 router.put('/', withAuth, async (req, res) => {
     try {
+        Object.keys(req.body).forEach((k) => req.body[k] == "" && delete req.body[k]);
         const profileData = await Profile.update({
             ...req.body
         }, {
