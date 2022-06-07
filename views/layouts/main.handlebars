@@ -16,7 +16,7 @@
     <div class="navbar-brand">
         <a class="navbar-item" href="localhost:3001">
             <figure class="image is-112x28">
-                <img src="./images/logo_icon.png" />
+                <img src="../images/logo_icon.png" />
             </figure>
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -37,7 +37,7 @@
                 <div class="buttons">
                     <!-- Conditionally render login or logout links -->
                     {{#if logged_in}}
-                    <a href="/profile" class="button">
+                    <a href="/profile/{{user_id}}" class="button">
                         Profile
                     </a>
                     <a href="/edit" class="button">

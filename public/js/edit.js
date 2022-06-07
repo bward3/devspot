@@ -37,6 +37,8 @@ techBtn.addEventListener('click', () => {
     newTech.classList.add('new-tech');
     techContainer.append(newTech);
     lastClicked.remove();
+    document.querySelector("#dropdownTitle").textContent = "Click me"
+    techBtn.disabled = true;
 });
 
 document.querySelector("#editBtn").addEventListener("click", async function () {
@@ -72,13 +74,32 @@ document.querySelector("#editBtn").addEventListener("click", async function () {
                     'Content-Type': 'application/json'
                 }
             });
-            if (userResponse.ok) {
-                document.location.replace("/profile");
-            } else {
-                alert("Something went wrong.")
-            }
+            // if (userResponse.ok) {
+            //     document.location.replace("/profile");
+            // } else {
+            //     alert("Something went wrong.")
+            // }
         }
     }
 
+    //add techs
+    var techs = [];
+    document.querySelectorAll('.new-tech').forEach((techDiv) => {
+        let tech = {
+            id: techDiv.getAttribute('data-id'),
+            proficiency: techDiv.getAttribute('data-proficiency')
+        }
+        techs.push(tech);
+    });
+    console.log(techs);
+    response = await fetch('/api/users/tech', {
+        method: 'POST',
+        body: JSON.stringify({
+            techs
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
     //should be put request
 });
