@@ -79,7 +79,11 @@ router.get("/edit", withAuth, async (req, res) => {
       },
       include: [{
         model: Tech
-      }],
+      },
+      {
+        model: Profile
+      }
+    ],
     });
     const techData = await Tech.findAll();
     const techs = techData.map((tech) => tech.get({
@@ -90,7 +94,7 @@ router.get("/edit", withAuth, async (req, res) => {
     const user = userData.get({
       plain: true
     });
-
+console.log(user);
     res.render("edit", {
       ...user,
       techs,

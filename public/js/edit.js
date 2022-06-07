@@ -2,6 +2,7 @@ var techBtn = document.getElementById('addTechBtn');
 techBtn.disabled = true;
 var currentId;
 var numTechs = 0;
+var newTechs = [];
 
 // Dropdown Add Tech
 document.querySelector("#dropdownBtn").addEventListener("click", function () {
@@ -35,6 +36,10 @@ techBtn.addEventListener('click', () => {
     newTech.classList.add('new-tech');
     techContainer.append(newTech);
     numTechs+=1;
+    newTechs.push({
+        name: techName, 
+        proficiency: proficiency
+    })
 });
 
 document.querySelector("#editBtn").addEventListener("click", async function () {
@@ -59,6 +64,8 @@ document.querySelector("#editBtn").addEventListener("click", async function () {
             'Content-Type': 'application/json'
         }
     });
+    // send new tech 
+    console.log(newTechs);
     if (response.ok) {
         if (image_link) {
             const userResponse = await fetch('/api/users', {

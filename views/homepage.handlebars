@@ -11,122 +11,99 @@
 {{! use loop to render user profiles }}
 
 {{#if logged_in}}
-  <section class="hero has-text-centered">
-    <div class="hero-body">
-      <p class="title">
-        Developer Profiles
-      </p>
-    </div>
-  </section>
-
-  <div class="row has-text-centered">
-    {{#each users}}
-      <div class="column is-2 is-inline-block">
-        <figure class="image is-128x128 is-inline-block">
-          {{#if image}}
-            <a href="/profile/{{id}}" class="img"><img
-                class="is-rounded"
-                src={{image}}
-              /></a>
-          {{else}}
-            <a href="/profile/{{id}}" class="img"><img
-                class="is-rounded"
-                src="./images/avatar.jpg"
-              /></a>
-          {{/if}}
-        </figure>
-        <p class="bd-notification is-info has-text-weight-bold">{{username}}</p>
-      </div>
-    {{/each}}
+<section class="hero has-text-centered">
+  <div class="hero-body">
+    <p class="title">
+      Developer Profiles
+    </p>
   </div>
+</section>
+
+<div class="row has-text-centered">
+  {{#each users}}
+  <div class="column is-2 is-inline-block">
+    <figure class="image is-128x128 is-inline-block">
+      {{#if image}}
+      <a href="/profile/{{id}}" class="img"><img class="is-rounded" src={{image}} /></a>
+      {{else}}
+      <a href="/profile/{{id}}" class="img"><img class="is-rounded" src="./images/avatar.jpg" /></a>
+      {{/if}}
+    </figure>
+    <p class="bd-notification is-info has-text-weight-bold">{{username}}</p>
+  </div>
+  {{/each}}
+</div>
 {{else}}
-  <section class="section">
-    <div class="container has-text-centered">
-      <p class="is-size-5" style="color: #9F2B00;">Use DevSpot to showcase your
-        technology and language proficiencies! Sign up to allow peers and
-        potential employers to see your skills.</p>
-    </div>
-  </section>
+<section class="section">
+  <div class="container has-text-centered">
+    <p class="is-size-5" style="color: #9F2B00;">Use DevSpot to showcase your
+      technology and language proficiencies! Sign up to allow peers and
+      potential employers to see your skills.</p>
+  </div>
+</section>
 
-  <div class="columns is-vcentered">
-    <div class="column">
-      <p
-        class="bd-notification is-info has-text-centered"
-        style="font-size: 1.5rem"
-      >User Profiles</p>
+<div class="columns is-vcentered">
+  <div class="column">
+    <p class="bd-notification is-info has-text-centered" style="font-size: 1.5rem">User Profiles</p>
 
-      <div class="columns is-mobile">
+    <div class="columns is-mobile">
 
-        <div class="column">
-          <div class="rows has-text-centered">
-            <figure class="image is-128x128 is-inline-block" style="margin: 2%">
-              {{! add member 1 of team 4 image from seed data }}
-              <a href="/login" class="img"><img
-                  class="is-rounded"
-                  src="./images/avatar.jpg"
-                /></a>
-            </figure>
-            {{! add name of team 4 member 1 from seed data }}
-            <p class="bd-notification is-info has-text-weight-bold">bward</p>
-            <figure class="image is-128x128 is-inline-block" style="margin: 2%">
-              {{! add member 2 of team 4 image from seed data }}
-              <a href="/login" class="img"><img
-                  class="is-rounded"
-                  src="./images/avatar.jpg"
-                /></a>
-            </figure>
-            {{! add name of team 4 member 2 from seed data }}
-            <p class="bd-notification is-info has-text-weight-bold">cfoye</p>
-          </div>
+      <div class="column">
+        <div class="rows has-text-centered">
+          <figure class="image is-128x128 is-inline-block" style="margin: 2%">
+            {{! add member 1 of team 4 image from seed data }}
+            <a href="/login" class="img"><img class="is-rounded" src="./images/avatar.jpg" /></a>
+          </figure>
+          {{! add name of team 4 member 1 from seed data }}
+          <p class="bd-notification is-info has-text-weight-bold">bward</p>
+          <figure class="image is-128x128 is-inline-block" style="margin: 2%">
+            {{! add member 2 of team 4 image from seed data }}
+            <a href="/login" class="img"><img class="is-rounded" src="./images/avatar.jpg" /></a>
+          </figure>
+          {{! add name of team 4 member 2 from seed data }}
+          <p class="bd-notification is-info has-text-weight-bold">cfoye</p>
         </div>
+      </div>
 
-        <div class="column">
-          <div class="rows has-text-centered">
-            <figure class="image is-128x128 is-inline-block" style="margin: 2%">
-              {{! add member 3 of team 4 image from seed data }}
-              <a href="/login" class="img"><img
-                  class="is-rounded"
-                  src="./images/avatar.jpg"
-                /></a>
-            </figure>
-            {{! add name of team 4 member 3 from seed data }}
-            <p class="bd-notification is-info has-text-weight-bold">nherrera</p>
-            <figure class="image is-128x128 is-inline-block" style="margin: 2%">
-              {{! add member 4 of team 4 image from seed data }}
-              <a href="/login" class="img"><img
-                  class="is-rounded"
-                  src="./images/avatar.jpg"
-                /></a>
-            </figure>
-            {{! add name of team 4 member 4 from seed data }}
-            <p class="bd-notification is-info has-text-weight-bold">kwalsh</p>
-          </div>
+      <div class="column">
+        <div class="rows has-text-centered">
+          <figure class="image is-128x128 is-inline-block" style="margin: 2%">
+            {{! add member 3 of team 4 image from seed data }}
+            <a href="/login" class="img"><img class="is-rounded" src="./images/avatar.jpg" /></a>
+          </figure>
+          {{! add name of team 4 member 3 from seed data }}
+          <p class="bd-notification is-info has-text-weight-bold">nherrera</p>
+          <figure class="image is-128x128 is-inline-block" style="margin: 2%">
+            {{! add member 4 of team 4 image from seed data }}
+            <a href="/login" class="img"><img class="is-rounded" src="./images/avatar.jpg" /></a>
+          </figure>
+          {{! add name of team 4 member 4 from seed data }}
+          <p class="bd-notification is-info has-text-weight-bold">kwalsh</p>
         </div>
       </div>
     </div>
-    <div class="column">
-      <div class="columns is-mobile is-centered">
-        <div class="column is-8">
-          <div class="box has-text-centered" style="width: 85%">
-            <div class="rows">
-              <div class="row is-full">
-                <button
-                  class="button is-large"
-                  style="width: 75%; margin-top: 7%; margin-bottom: 3%; background-color: #9F2B00; color: white"
-                  id="loginButton"
-                >Login</button>
-              </div>
-              <div class="row is-full">
-                <button
-                  class="button is-large"
-                  style="width: 75%; margin-bottom: 7%; margin-top: 3%; background-color: #9F2B00; color: white"
-                  id="signupButton"
-                >Sign Up</button>
-              </div>
+  </div>
+  <div class="column">
+    <div class="columns is-mobile is-centered">
+      <div class="column is-8">
+        <div class="box has-text-centered" style="width: 85%">
+          <div class="rows">
+            <div class="row is-full">
+              <button class="button is-large"
+                style="width: 75%; margin-top: 7%; margin-bottom: 3%; background-color: #9F2B00; color: white"
+                id="loginButton">Login</button>
+            </div>
+            <div class="row is-full">
+              <button class="button is-large"
+                style="width: 75%; margin-bottom: 7%; margin-top: 3%; background-color: #9F2B00; color: white"
+                id="signupButton">Sign Up</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 {{/if}}
+
+<script src="./js/homepage.js"></script>
