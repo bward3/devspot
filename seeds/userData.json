@@ -3,24 +3,52 @@
     "id": 1,
     "username": "cfoye",
     "email": "cfoye@email.com",
-    "password": "password"
+    "password": "password",
+    "image_link": "https://res.cloudinary.com/dcvzcwxen/image/upload/v1654638026/devspot/4043232_avatar_batman_comics_hero_icon.png"
   },
   {
     "id": 2,
     "username": "kwalsh",
     "email": "kwalsh@email.com",
-    "password": "password"
+    "password": "password",
+    "image_link": "https://res.cloudinary.com/dcvzcwxen/image/upload/v1654638026/devspot/4043233_anime_away_face_no_nobody_icon.png"
   },
   {
     "id": 3,
     "username": "nherrera",
     "email": "nherrera@email.com",
-    "password": "password"
+    "password": "password",
+    "image_link": "https://res.cloudinary.com/dcvzcwxen/image/upload/v1654638026/devspot/4043274_avatar_einstein_professor_scientist_icon.png"
   },
   {
     "id": 4,
     "username": "bward",
     "email": "bward@email.com",
+    "password": "password",
+    "image_link": "https://res.cloudinary.com/dcvzcwxen/image/upload/v1654638026/devspot/4043267_fighter_luchador_man_wrestler_icon.png"
+  },
+  {
+    "id": 5,
+    "username": "tstark",
+    "email": "tony@stark.ent",
+    "password": "password"
+  },
+  {
+    "id": 6,
+    "username": "pparker",
+    "email": "peter@parker.com",
+    "password": "password"
+  },
+  {
+    "id": 7,
+    "username": "hpotter",
+    "email": "hpotter@hogwards.edu",
+    "password": "password"
+  },
+  {
+    "id": 8,
+    "username": "tcruise",
+    "email": "tom@science.cult",
     "password": "password"
   }
 ]
