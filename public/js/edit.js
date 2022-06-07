@@ -2,6 +2,7 @@ var techBtn = document.getElementById('addTechBtn');
 techBtn.disabled = true;
 var currentId;
 var numTechs = 0;
+var lastClicked;
 
 // Dropdown Add Tech
 document.querySelector("#dropdownBtn").addEventListener("click", function () {
@@ -13,6 +14,7 @@ document.querySelectorAll(".dropdown-item").forEach(function (item) {
         document.querySelector("#dropdownTitle").textContent = event.target.textContent;
         document.querySelector("#dropdown-menu3").classList.add("is-hidden");
         currentId = event.target.getAttribute('data-id');
+        lastClicked = event.target;
         techBtn.disabled = false;
     })
 });
@@ -34,7 +36,7 @@ techBtn.addEventListener('click', () => {
     newTech.setAttribute('data-proficiency', proficiency);
     newTech.classList.add('new-tech');
     techContainer.append(newTech);
-    numTechs+=1;
+    lastClicked.remove();
 });
 
 document.querySelector("#editBtn").addEventListener("click", async function () {
