@@ -35,7 +35,8 @@ router.put('/', withAuth, async (req, res) => {
         console.log(err);
         res.status(400).json(err);
     }
-});
+  }
+);
 
 // router.get("/", withAuth, async (req, res) => {
 //     try {
