@@ -1,3 +1,6 @@
+const { Profile } = require("../../models");
+
+
 // Dropdown Add Tech
 document.querySelector("#dropdownBtn").addEventListener("click", function() {
     document.querySelector("#dropdown-menu3").classList.remove("is-hidden")
@@ -16,6 +19,7 @@ document.querySelectorAll(".dropdown-item").forEach( function(item) {
 
 // document.querySelector('#upload-btn').addEventListener('click', () => {
 // });
+
 
 
 
