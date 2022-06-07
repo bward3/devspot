@@ -126,7 +126,7 @@ List of Contributors:
 Kelly Walsh - kellywalsh827@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-kelly] [![GitHub][github-shield]][github-url-kelly] </br>
 Catherine Foye - addEmail@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-catherine] [![GitHub][github-shield]][github-url-catherine] </br>
 Norman Herrera - normanh.dev@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-norman] [![GitHub][github-shield]][github-url-norman] </br>
-Brian Ward - addEmail@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-brian] [![GitHub][github-shield]][github-url-brian] </br>
+Brian Ward - brianwardcs@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-brian] [![GitHub][github-shield]][github-url-brian] </br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -147,7 +147,7 @@ Brian Ward - addEmail@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-bria
 [linkedin-url-kelly]: https://www.linkedin.com/in/kellywalsh001/
 [linkedin-url-catherine]: https://www.linkedin.com/in/catherine-foye/
 [linkedin-url-norman]: https://www.linkedin.com/in/norman-herrera-dev/
-[linkedin-url-brian]: https://www.linkedin.com/in/kellywalsh001/
+[linkedin-url-brian]: https://www.linkedin.com/in/bward3/
 [github-shield]: https://img.shields.io/badge/-Github-blueviolet.svg?style=for-the-badge&logo=Github&colorB=555
 [github-url-kelly]: https://github.com/kemwalsh
 [github-url-catherine]: https://github.com/cdfoye

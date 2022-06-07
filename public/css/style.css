@@ -32,3 +32,57 @@
     max-width: 150px;
     max-height: 150px;
 }
+
+.prof-container {
+    display: flex;
+    border: 2px black solid;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+}
+
+.prof-meter-0 {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    width: 0%;
+}
+.prof-meter-1 {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    width: 25%;
+}
+.prof-meter-2 {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    width: 50%;
+}
+.prof-meter-3 {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    width: 75%;
+}
+.prof-meter-4 {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+}
+
+.new-tech {
+    margin: 2px;
+}
+
+#techContainer {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+#techContainer div {
+    display: flex;
+    justify-content: space-between;
+}
